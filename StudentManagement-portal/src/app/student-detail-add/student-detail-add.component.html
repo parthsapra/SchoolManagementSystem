@@ -1,0 +1,87 @@
+<div class="container">
+    <h3>Add Student's details</h3>
+    <form [formGroup]="studentDetailFormGroup">
+        <div class="form-group">
+            <input type="number" class="form-control" formControlName="studentId" placeholder="enter student id"
+                required>
+            <small class="form-text text-danger"
+                *ngIf="studentDetailFormGroup.controls.studentId.invalid && studentDetailFormGroup.controls.studentId.touched">this
+                feild is require</small>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="address" placeholder="enter address"
+                required>
+            <small class="form-text text-danger"
+                *ngIf="studentDetailFormGroup.controls.address.invalid && studentDetailFormGroup.controls.address.touched">this
+                feild is require</small>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="studentHeight" placeholder="enter student height">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="studentWeight" placeholder="enter studentWeight">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="placeOfBirth" placeholder="enter placeOfBirth"
+                required>
+            <small class="form-text text-danger"
+                *ngIf="studentDetailFormGroup.controls.placeOfBirth.invalid && studentDetailFormGroup.controls.placeOfBirth.touched">this
+                feild is require</small>
+        </div>
+        <div class="form-group">
+                <select class="form-control" formControlName="motherTongue">
+                    <option value="" disabled selected>select motherTongue</option>
+                    <option>Gujarati</option>
+                    <option>Hindi</option>
+                    <option>Other</option>
+                </select>
+            <small class="form-text text-danger"
+                *ngIf="studentDetailFormGroup.controls.motherTongue.invalid && studentDetailFormGroup.controls.motherTongue.touched">this
+                feild is require</small>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="aadharCardNumber" placeholder="enter aadharCardNumber">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="nationality" placeholder="nationality"
+                required>
+            <small class="form-text text-danger"
+                *ngIf="studentDetailFormGroup.controls.nationality.invalid && studentDetailFormGroup.controls.nationality.touched">this
+                feild is require</small>
+        </div>
+        <div class="form-group">
+                <select class="form-control" formControlName="gender">
+                    <option value="" disabled selected>select gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+                <!-- <select>
+                    <option *ngFor="let symbol of keys(gender)" [ngValue]="gender[symbol]">{{symbol}}</option>
+                  </select>             -->
+            <small class="form-text text-danger"
+                *ngIf="studentDetailFormGroup.controls.gender.invalid && studentDetailFormGroup.controls.gender.touched">this
+                feild is require</small>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="religion" placeholder="religion"
+                required>
+            <small class="form-text text-danger"
+                *ngIf="studentDetailFormGroup.controls.religion.invalid && studentDetailFormGroup.controls.religion.touched">this
+                feild is require</small>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="identificationMark" placeholder="identificationMark">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="bloodGroup" placeholder="bloodGroup">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="numberOfSibling" placeholder="numberOfSibling">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="lastSchoolName" placeholder="lastSchoolName">
+        </div>        
+        <button class="btn btn-primary btn-block" style="margin-top: 10px;" [disabled]="!studentDetailFormGroup.valid"
+            (click)="addStudentDetail()">Add Student Details</button>
+    </form>
+</div>

@@ -1,0 +1,90 @@
+<div class="container">
+    <div *ngIf="isSelect">
+        <button class="btn btn-primary" (click)="oldAdmission()">old admission</button>
+        <button class="btn btn-primary" (click)="newAdmission()" style="margin-left: 10px;">new admission</button>
+    </div>
+    <div class="container" *ngIf="oldAd">
+        <h3>Add details</h3>
+        <form [formGroup]="oldAdmissionFormGroup">
+            <div class="form-group">
+                <input type="number" class="form-control" formControlName="studentId" placeholder="enter student id"
+                    required>
+                <small class="form-text text-danger"
+                    *ngIf="oldAdmissionFormGroup.controls.studentId.invalid && oldAdmissionFormGroup.controls.studentId.touched">this
+                    feild is require</small>
+            </div>
+            <div class="form-group">
+                <select class="form-control" formControlName="standardType">
+                    <option disabled value="" selected>select standard</option>
+                    <option>Nursery</option>
+                    <option>Junior KG</option>
+                    <option>Senior KG</option>
+                </select>
+                <small class="form-text text-danger"
+                    *ngIf="oldAdmissionFormGroup.controls.standardType.invalid && oldAdmissionFormGroup.controls.standardType.touched">this
+                    feild is require</small>
+            </div>
+
+            <div class="form-group">
+                <select class="form-control" formControlName="admissionStatus">
+                    <option disabled value="" selected>select admissionStatus</option>
+                    <option>pending</option>
+                    <option>confirm</option>
+                </select>
+                <small class="form-text text-danger"
+                    *ngIf="oldAdmissionFormGroup.controls.admissionStatus.invalid && oldAdmissionFormGroup.controls.admissionStatus.touched">this
+                    feild is require</small>
+            </div>
+
+            <button class="btn btn-primary btn-block" style="margin-top: 10px;"
+                [disabled]="!oldAdmissionFormGroup.valid" (click)="addAdmission()">Confirm Admission</button>
+            </form>
+        </div>
+        <!-- =================================================================new admission====================== -->
+        <div class="container" *ngIf="newAd">
+            <h3>Add Student Detail:</h3>
+            <form [formGroup]="newAdmissionFormGroup">
+                <div class="form-group">
+                <input type="text" class="form-control" formControlName="studentName" placeholder="enter student name"
+                required>
+                <small class="form-text text-danger"
+                *ngIf="newAdmissionFormGroup.controls.studentName.invalid && newAdmissionFormGroup.controls.studentName.touched">this
+                feild is require</small>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" formControlName="studentGaurdianName" placeholder="enter Gaurdian Name"
+                required>
+                <small class="form-text text-danger"
+                *ngIf="newAdmissionFormGroup.controls.studentGaurdianName.invalid && newAdmissionFormGroup.controls.studentGaurdianName.touched">this
+                feild is require</small>
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" formControlName="studentGRNo" placeholder="enter studentGRNo"
+                required>
+                <small class="form-text text-danger"
+                *ngIf="newAdmissionFormGroup.controls.studentGRNo.invalid && newAdmissionFormGroup.controls.studentGRNo.touched">this
+                feild is require</small>
+            </div>
+        <div class="form-group">
+            <input type="date" class="form-control" formControlName="dateOfBirth" placeholder="enter dateOfBirth"
+            required>
+            <small class="form-text text-danger"
+                *ngIf="newAdmissionFormGroup.controls.dateOfBirth.invalid && newAdmissionFormGroup.controls.dateOfBirth.touched">this
+                feild is require</small>
+            </div>
+            <div class="form-group">
+                <select class="form-control" formControlName="standardType">
+                    <option disabled value="" selected>select standard</option>
+                    <option>Nursery</option>
+                    <option>Junior KG</option>
+                    <option>Senior KG</option>
+                </select>
+                <small class="form-text text-danger"
+                *ngIf="newAdmissionFormGroup.controls.standardType.invalid && newAdmissionFormGroup.controls.standardType.touched">this
+                feild is require</small>
+            </div>
+            <button class="btn btn-primary btn-block" style="margin-top: 10px;"
+                [disabled]="!newAdmissionFormGroup.valid" (click)="addNewAdmission()">Confirm Admission</button>
+        </form>
+    </div>
+</div>

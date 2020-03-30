@@ -1,0 +1,92 @@
+<div class="container">
+    <h3>Add Gaurdian's details</h3>
+    <form [formGroup]="guardianDetailFormGroup">
+        <div class="form-group">
+            <input type="number" class="form-control" formControlName="studentId" placeholder="enter student id"
+                required>
+            <small class="form-text text-danger"
+                *ngIf="guardianDetailFormGroup.controls.studentId.invalid && guardianDetailFormGroup.controls.studentId.touched">this
+                feild is require</small>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="fatherName" placeholder="enter father Name"
+                required>
+            <small class="form-text text-danger"
+                *ngIf="guardianDetailFormGroup.controls.fatherName.invalid && guardianDetailFormGroup.controls.fatherName.touched">this
+                feild is require</small>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="motherName" placeholder="enter mother Name"
+                required>
+            <small class="form-text text-danger"
+                *ngIf="guardianDetailFormGroup.controls.motherName.invalid && guardianDetailFormGroup.controls.motherName.touched">this
+                feild is require</small>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="fatherOccupation" placeholder="enter father occupation"
+                required>
+            <small class="form-text text-danger"
+                *ngIf="guardianDetailFormGroup.controls.fatherOccupation.invalid && guardianDetailFormGroup.controls.fatherOccupation.touched">this
+                feild is require</small>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="motherOccupation" placeholder="enter mother occupation"
+                required>
+            <small class="form-text text-danger"
+                *ngIf="guardianDetailFormGroup.controls.motherOccupation.invalid && guardianDetailFormGroup.controls.motherOccupation.touched">this
+                feild is require</small>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="fatherEducation" placeholder="enter father Education"
+                required>
+            <small class="form-text text-danger"
+                *ngIf="guardianDetailFormGroup.controls.fatherEducation.invalid && guardianDetailFormGroup.controls.fatherEducation.touched">this
+                feild is require</small>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="motherEducation" placeholder="enter mother Education"
+                required>
+            <small class="form-text text-danger"
+                *ngIf="guardianDetailFormGroup.controls.motherEducation.invalid && guardianDetailFormGroup.controls.motherEducation.touched">this
+                feild is require</small>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="fatherReligion" placeholder="enter father religion"
+                required>
+            <small class="form-text text-danger"
+                *ngIf="guardianDetailFormGroup.controls.fatherReligion.invalid && guardianDetailFormGroup.controls.fatherReligion.touched">this
+                feild is require</small>
+        </div>
+        <div class="form-group">
+            <input type="number" class="form-control" formControlName="contactNumber" placeholder="enter contactNumber"
+                required>
+            <small class="form-text text-danger"
+                *ngIf="guardianDetailFormGroup.controls.contactNumber.invalid && guardianDetailFormGroup.controls.contactNumber.touched">this
+                feild is require</small>
+        </div>
+        <div class="form-group">
+            <input type="email" class="form-control" formControlName="emailId" placeholder="enter email id"
+                required>
+            <small class="form-text text-danger"
+                *ngIf="guardianDetailFormGroup.controls.emailId.invalid && guardianDetailFormGroup.controls.emailId.touched">this
+                feild is require</small>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="address" placeholder="enter address"
+                required>
+            <small class="form-text text-danger"
+                *ngIf="guardianDetailFormGroup.controls.address.invalid && guardianDetailFormGroup.controls.address.touched">this
+                feild is require</small>
+        </div>
+        <div class="form-group">
+            <input type="number" class="form-control" formControlName="pincode" placeholder="enter pincode"
+                required>
+            <small class="form-text text-danger"
+                *ngIf="guardianDetailFormGroup.controls.pincode.invalid && guardianDetailFormGroup.controls.pincode.touched">this
+                feild is require</small>
+        </div>
+        
+        <button class="btn btn-primary btn-block" style="margin-top: 10px;" [disabled]="!guardianDetailFormGroup.valid"
+            (click)="addGaurdianDetail()">Add Details</button>
+    </form>
+</div>

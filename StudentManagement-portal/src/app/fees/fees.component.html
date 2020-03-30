@@ -1,0 +1,35 @@
+<div class="container">
+    <h3>Fees payment:</h3>
+    <form [formGroup]="feeFormGroup">
+        <div class="form-group">
+            <input type="number" class="form-control" formControlName="studentId" placeholder="enter student id"
+                required>
+            <small class="form-text text-danger"
+                *ngIf="feeFormGroup.controls.studentId.invalid && feeFormGroup.controls.studentId.touched">this
+                feild is require</small>
+        </div>
+        <div class="form-group">
+            <input type="number" class="form-control" formControlName="feeAmount" placeholder="enter feeAmount"
+                required>
+            <small class="form-text text-danger"
+                *ngIf="feeFormGroup.controls.feeAmount.invalid && feeFormGroup.controls.feeAmount.touched">this
+                feild is require</small>
+        </div>
+        <div class="form-group">
+            <input type="number" class="form-control" formControlName="totalfees" placeholder="enter totalfees"
+                required>
+            <small class="form-text text-danger"
+                *ngIf="feeFormGroup.controls.totalfees.invalid && feeFormGroup.controls.totalfees.touched">this
+                feild is require</small>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="installment" placeholder="installment"
+                required>
+            <small class="form-text text-danger"
+                *ngIf="feeFormGroup.controls.installment.invalid && feeFormGroup.controls.installment.touched">this
+                feild is require</small>
+        </div>
+        <button class="btn btn-primary btn-block" style="margin-top: 10px;" [disabled]="!feeFormGroup.valid"
+            (click)="addFee()">Confirm Fee</button>
+    </form>
+</div>
