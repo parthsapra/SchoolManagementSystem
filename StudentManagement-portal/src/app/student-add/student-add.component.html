@@ -14,14 +14,14 @@
                     feild is require</small>
             </div>
             <div class="form-group">
-                <select class="form-control" formControlName="standardType">
+                <select class="form-control" formControlName="standardId">
                     <option disabled value="" selected>select standard</option>
                     <option>Nursery</option>
                     <option>Junior KG</option>
                     <option>Senior KG</option>
                 </select>
                 <small class="form-text text-danger"
-                    *ngIf="oldAdmissionFormGroup.controls.standardType.invalid && oldAdmissionFormGroup.controls.standardType.touched">this
+                    *ngIf="oldAdmissionFormGroup.controls.standardId.invalid && oldAdmissionFormGroup.controls.standardId.touched">this
                     feild is require</small>
             </div>
 
@@ -73,14 +73,14 @@
                 feild is require</small>
             </div>
             <div class="form-group">
-                <select class="form-control" formControlName="standardType">
+                <select class="form-control" formControlName="standardId">
                     <option disabled value="" selected>select standard</option>
                     <option>Nursery</option>
                     <option>Junior KG</option>
                     <option>Senior KG</option>
                 </select>
                 <small class="form-text text-danger"
-                *ngIf="newAdmissionFormGroup.controls.standardType.invalid && newAdmissionFormGroup.controls.standardType.touched">this
+                *ngIf="newAdmissionFormGroup.controls.standardId.invalid && newAdmissionFormGroup.controls.standardId.touched">this
                 feild is require</small>
             </div>
             <button class="btn btn-primary btn-block" style="margin-top: 10px;"

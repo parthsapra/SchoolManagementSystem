@@ -9,6 +9,7 @@ import { GardianDetailAddComponent } from './gardian-detail-add/gardian-detail-a
 import { FeesComponent } from './fees/fees.component';
 import { AdmissionComponent } from './admission/admission.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule,HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
